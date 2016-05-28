@@ -8,5 +8,10 @@ class User < ActiveRecord::Base
   has_many :posts       
   def name
     firstname + ' ' + lastname
-  end       
+  end    
+  
+  validates :firstname, presence: true
+  validates :lastname, presence: true
+  validates :username, presence: true ,  length: { minimum: 6}
+  
 end
