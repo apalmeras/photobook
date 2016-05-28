@@ -20,8 +20,8 @@ RSpec.describe User, type: :model do
         expect(@user.save).to be false
       end
     
-      it "username length is < 6" do
-        @user = build(:user, username: "asdfg")
+      it "username length is < 2" do
+        @user = build(:user, username: "a")
         expect(@user.save).to be false  
       end
     end

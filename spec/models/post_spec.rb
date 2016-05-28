@@ -32,7 +32,7 @@ RSpec.describe Post, type: :model do
 
       it "should not be valid with long description" do
         @post = build(:post_with_longdescription)
-        expect(@post.save).to be false
+        expect(@post.save).to be true
       end
 
     end
